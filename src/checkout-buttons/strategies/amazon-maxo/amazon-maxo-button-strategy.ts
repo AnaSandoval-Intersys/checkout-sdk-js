@@ -86,7 +86,7 @@ export default class AmazonMaxoButtonStrategy implements CheckoutButtonStrategy 
             productType: 'PayAndShip',
             createCheckoutSession: {
                 method: checkoutSessionMethod,
-                url: `${config.links.siteLink}/remote-checkout-token/${this._getMethodId()}`,
+                url: `${config.links.siteLink}/remote-checkout/${this._getMethodId()}/payment-session`,
                 extractAmazonCheckoutSessionId,
             },
             placement: AmazonMaxoPlacement.Cart,

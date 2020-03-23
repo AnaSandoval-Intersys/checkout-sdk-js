@@ -113,7 +113,7 @@ export default class AmazonMaxoCustomerStrategy implements CustomerStrategy {
             productType: 'PayAndShip',
             createCheckoutSession: {
                 method: checkoutSessionMethod,
-                url: `${config.links.siteLink}/remote-checkout-token/${this._methodId}`,
+                url: `${config.links.siteLink}/remote-checkout/${this._methodId}/payment-session`,
                 extractAmazonCheckoutSessionId,
             },
             placement: AmazonMaxoPlacement.Checkout,
